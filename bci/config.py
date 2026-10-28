@@ -26,7 +26,10 @@ PAUSE_S = 2.0
 CLASSES = ["left", "right", "rest"]
 TRIALS_PER_CLASS = 15
 
-# EEG stream parameters (both real and simulated)
+# EEG stream parameters (could be real and simulated)
 EEG_STREAM_NAME = "SimulatedEEG"
 EEG_SAMPLING_RATE_HZ = 500
 EEG_CHANNEL_COUNT = 32
+
+# Marker stream: name expected by the Unity game
+MARKER_STREAM_NAME = "GrazMI_Markers"
