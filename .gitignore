@@ -1,0 +1,11 @@
+# Local data: recordings, models, outputs
+data/
+*.xdf
+
+# Python, pytest and Jupyter caches
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editor settings
+.vscode/
