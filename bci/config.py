@@ -1,5 +1,7 @@
 """Settings shared by all programs: marker codes and experiment parameters."""
 
+from pathlib import Path
+
 # Numeric codes recognized by the Unity game; 
 BASELINE = 1
 FIXATION = 2
@@ -33,3 +35,7 @@ EEG_CHANNEL_COUNT = 32
 
 # Marker stream: name expected by the Unity game
 MARKER_STREAM_NAME = "GrazMI_Markers"
+
+# Folder for saved blocks (path without spaces); data/ inside the repository is ignored by git
+SAVE_DIR = Path(__file__).resolve().parent.parent / "data"
+SOURCEDATA_DIR = SAVE_DIR / "sourcedata"
