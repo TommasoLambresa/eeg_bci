@@ -4,6 +4,7 @@ data/
 
 # Python, pytest and Jupyter caches
 __pycache__/
+*.egg-info/
 .pytest_cache/
 .ipynb_checkpoints/
 

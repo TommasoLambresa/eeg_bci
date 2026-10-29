@@ -8,7 +8,10 @@ Real-time EEG brain-computer interface: knee extension motor imagery controls th
 conda create -n eeg_bci python=3.12
 conda activate eeg_bci
 pip install -r requirements.txt
+pip install -e .
 ```
+
+`pip install -e .` makes the `bci` folder importable from the programs in `scripts/` and from the notebooks.
 
 ## Data folder
 
