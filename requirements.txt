@@ -6,3 +6,4 @@ pylsl>=1.16
 pyxdf>=1.16
 matplotlib>=3.8
 pytest>=8.0
+ipykernel>=6.0
