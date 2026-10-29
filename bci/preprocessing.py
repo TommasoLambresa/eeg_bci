@@ -62,3 +62,21 @@ def erd_percent(epochs: np.ndarray, epoch_times_s: np.ndarray, reference_window_
     reference_power = band_power(epochs, epoch_times_s, reference_window_s)
     activity_power = band_power(epochs, epoch_times_s, activity_window_s)
     return 100 * (activity_power / reference_power - 1)
+
+
+def sliding_windows(epochs: np.ndarray, labels: np.ndarray, window_samples: int,
+                    step_samples: int) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Cut overlapping windows inside each epoch.
+
+    Returns windows (windows x channels x samples, the pyriemann layout), their labels and the
+    index of the epoch they come from, so that windows of one trial stay in the same fold.
+    """
+    windows = []
+    window_labels = []
+    window_trials = []
+    for trial_index, (epoch, label) in enumerate(zip(epochs, labels)):
+        for first_sample in range(0, epoch.shape[0] - window_samples + 1, step_samples):
+            windows.append(epoch[first_sample:first_sample + window_samples].T)
+            window_labels.append(label)
+            window_trials.append(trial_index)
+    return np.stack(windows), np.array(window_labels), np.array(window_trials)

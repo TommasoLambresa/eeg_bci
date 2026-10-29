@@ -39,3 +39,16 @@ MARKER_STREAM_NAME = "GrazMI_Markers"
 # Folder for saved blocks (path without spaces); data/ inside the repository is ignored by git
 SAVE_DIR = Path(__file__).resolve().parent.parent / "data"
 SOURCEDATA_DIR = SAVE_DIR / "sourcedata"
+MODELS_DIR = SAVE_DIR / "derivatives" / "models"
+
+# Decoder training; band, filter order and window length are saved with each model and reused online
+DECODER_NAME = "tangent_space_lda"
+DECODER_CLASSES = ["left", "right", "rest"]
+DECODER_BAND_HZ = (8.0, 30.0)
+DECODER_FILTER_ORDER = 4
+WINDOW_S = 1.0
+WINDOW_STEP_S = 0.25
+# part of each imagery period used for training, relative to the TASK marker
+TRAINING_START_S = 0.5
+TRAINING_END_S = 3.75
+FOLD_COUNT = 5

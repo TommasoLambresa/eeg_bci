@@ -2,6 +2,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.metrics import ConfusionMatrixDisplay
 
 
 def plot_erd(erd_percent: np.ndarray, labels: np.ndarray) -> None:
@@ -14,4 +15,10 @@ def plot_erd(erd_percent: np.ndarray, labels: np.ndarray) -> None:
     plt.xlabel("channel")
     plt.ylabel("mu-band power change during imagery (%)")
     plt.legend()
+    plt.show()
+
+
+def plot_confusion_matrix(true_labels: np.ndarray, predicted_labels: np.ndarray) -> None:
+    """Fraction of the windows of each true class assigned to each predicted class."""
+    ConfusionMatrixDisplay.from_predictions(true_labels, predicted_labels, normalize="true")
     plt.show()
