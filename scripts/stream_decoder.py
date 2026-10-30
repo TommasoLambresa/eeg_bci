@@ -45,7 +45,8 @@ samples_since_update = 0
 print(f"Decoding {class_names} from '{config.EEG_STREAM_NAME}'. Press Ctrl+C to stop.")
 
 while True:
-    chunk, timestamps = eeg_inlet.pull_chunk(timeout=1.0)
+    # return as soon as one update step of samples has arrived
+    chunk, timestamps = eeg_inlet.pull_chunk(timeout=1.0, max_samples=update_samples)
     if not timestamps:
         continue
     filtered_chunk, filter_state = bandpass(np.asarray(chunk), sampling_rate_hz, model["band_hz"][0],
