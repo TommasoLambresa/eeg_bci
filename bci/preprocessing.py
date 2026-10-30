@@ -19,10 +19,17 @@ def load_block(path: str | Path) -> tuple[np.ndarray, np.ndarray, np.ndarray, np
     return eeg["time_series"], eeg["time_stamps"], marker_codes, markers["time_stamps"]
 
 
-def bandpass(eeg: np.ndarray, sampling_rate_hz: float, low_hz: float, high_hz: float, order: int) -> np.ndarray:
-    """Causal Butterworth band-pass along time (rows), the same filter that can run online."""
+def bandpass(eeg: np.ndarray, sampling_rate_hz: float, low_hz: float, high_hz: float, order: int,
+             filter_state: np.ndarray | None = None) -> tuple[np.ndarray, np.ndarray]:
+    """Causal Butterworth band-pass along time (rows).
+
+    Offline, filter a whole recording and ignore the returned state. Online, pass the state returned by
+    the previous call (None the first time) to filter chunk after chunk as if it were one signal.
+    """
     sos = signal.butter(order, [low_hz, high_hz], btype="bandpass", fs=sampling_rate_hz, output="sos")
-    return signal.sosfilt(sos, eeg, axis=0)
+    if filter_state is None:
+        filter_state = np.zeros((sos.shape[0], 2, eeg.shape[1]))
+    return signal.sosfilt(sos, eeg, axis=0, zi=filter_state)
 
 
 def task_epochs(eeg: np.ndarray, eeg_times: np.ndarray, marker_codes: np.ndarray, marker_times: np.ndarray,

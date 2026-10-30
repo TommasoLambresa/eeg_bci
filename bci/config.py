@@ -52,3 +52,7 @@ WINDOW_STEP_S = 0.25
 TRAINING_START_S = 0.5
 TRAINING_END_S = 3.75
 FOLD_COUNT = 5
+
+# Online decoder: output stream and how often the latest window is classified
+DECODER_STREAM_NAME = "DecoderProbabilities"
+DECODER_UPDATE_S = 0.05

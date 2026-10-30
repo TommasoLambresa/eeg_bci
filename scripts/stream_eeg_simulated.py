@@ -9,6 +9,7 @@ CHUNK_SIZE = 10 # samples per channel per push
 NOISE_STD_UV = 10.0
 RHYTHM_FREQUENCY_HZ = 10.0 # fake EEG rhythm frequency
 RHYTHM_AMPLITUDE_UV = 10.0 # fake EEG rhythm amplitude
+PHASE_SEED = 0
 
 # parameters for the event-related desynchronization (ERD) effect
 ERD_FACTOR = 0.5
@@ -50,7 +51,7 @@ marker_inlet = StreamInlet(found_streams[0])
 cued_class = None
 active_class = None
 
-random_generator = np.random.default_rng()
+random_generator = np.random.default_rng(PHASE_SEED)
 # each channel gets its own phase so that channels are not identical
 rhythm_phases = random_generator.uniform(0, 2 * np.pi, config.EEG_CHANNEL_COUNT)
 chunk_period_s = CHUNK_SIZE / config.EEG_SAMPLING_RATE_HZ # seconds per chunk
