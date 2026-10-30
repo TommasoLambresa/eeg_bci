@@ -25,6 +25,7 @@ def launch(eeg_simulated: bool, model_path: str | Path | None, save: bool) -> li
         programs.append(("stream_eeg_simulated.py", [], config.EEG_STREAM_NAME))
     if model_path is not None:
         programs.append(("stream_decoder.py", [str(model_path)], config.DECODER_STREAM_NAME))
+        programs.append(("stream_controller_unity.py", [], config.CONTROLLER_UNITY_STREAM_NAME))
     if save:
         programs.append(("stream_saver.py", [], None))
 

@@ -20,7 +20,7 @@ TASK_S = 3.75
 PAUSE_S = 2.0
 
 CLASSES = ["left", "right", "rest"]
-TRIALS_PER_CLASS = 2
+TRIALS_PER_CLASS = 15
 
 # Numeric codes recognized by the Unity game; 
 BASELINE = 1
@@ -61,3 +61,13 @@ FOLD_COUNT = 5
 # Online decoder: output stream and how often the latest window is classified
 DECODER_STREAM_NAME = "DecoderProbabilities"
 DECODER_UPDATE_S = 0.05
+
+# Unity controller: decoder probabilities to leg movements (stream name expected by Unity)
+CONTROLLER_UNITY_STREAM_NAME = "GrazMI_Control"
+CONTROLLER_UNITY_RATE_HZ = 60.0
+CONTROLLER_UNITY_SMOOTHING_S = 0.5 # time constant of the probability smoothing
+CONTROLLER_UNITY_ENTER_PROBABILITY = 0.6 # a leg starts moving above this smoothed probability
+CONTROLLER_UNITY_EXIT_PROBABILITY = 0.45 # and stops below this one
+CONTROLLER_UNITY_STALE_S = 0.6 # no command if the decoder is silent for longer
+LEG_RISE_S = 1.0 # time to extend a leg completely
+LEG_FALL_S = 0.8 # time to bring it back
