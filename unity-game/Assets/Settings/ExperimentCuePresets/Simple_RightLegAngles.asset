@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2661f1ccb7b09874f83764c44c668fd7, type: 3}
+  m_Name: Simple_RightLegAngles
+  m_EditorClassIdentifier: Assembly-CSharp::ExperimentCuePreset
+  presetName: 'Simple: one leg movement at different angles'
+  notes: 'Initial Experiment 2 cue preset: right leg movement at 90, 60, 45,
+    30 degrees plus relaxed/rest state.'
+  baseMarkerCode: 1000
+  repetitionsPerClass: 10
+  classes:
+  - enabled: 1
+    classId: right_90
+    label: direita 90
+    markerCode: 1000
+    cueImage: {fileID: 0}
+    description: Right leg movement target at 90 degrees.
+    targetAngle: 90
+  - enabled: 1
+    classId: right_60
+    label: direita 60
+    markerCode: 1001
+    cueImage: {fileID: 0}
+    description: Right leg movement target at 60 degrees.
+    targetAngle: 60
+  - enabled: 1
+    classId: right_45
+    label: direita 45
+    markerCode: 1002
+    cueImage: {fileID: 0}
+    description: Right leg movement target at 45 degrees.
+    targetAngle: 45
+  - enabled: 1
+    classId: right_30
+    label: direita 30
+    markerCode: 1003
+    cueImage: {fileID: 0}
+    description: Right leg movement target at 30 degrees.
+    targetAngle: 30
+  - enabled: 1
+    classId: relaxed
+    label: relaxado
+    markerCode: 1004
+    cueImage: {fileID: 0}
+    description: Relaxed/rest state with no active leg movement target.
+    targetAngle: 0

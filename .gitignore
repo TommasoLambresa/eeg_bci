@@ -10,3 +10,17 @@ __pycache__/
 
 # Editor settings
 .vscode/
+
+# Unity: local caches, builds and generated files
+unity-game/[Ll]ibrary/
+unity-game/[Tt]emp/
+unity-game/[Oo]bj/
+unity-game/[Bb]uilds/
+unity-game/[Ll]ogs/
+unity-game/[Uu]ser[Ss]ettings/
+unity-game/[Mm]emoryCaptures/
+unity-game/[Rr]ecordings/
+*.csproj
+*.sln
+*.slnx
+.vs/

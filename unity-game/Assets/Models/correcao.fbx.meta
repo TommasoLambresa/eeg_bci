@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 149322b85dd105f4291ffc08e8a10d89
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - Empty
+    - Empty/ArmatureD
+    - Empty/ArmatureD/CoxaD
+    - Empty/ArmatureD/CoxaD/PernaD
+    - Empty/ArmatureD/CoxaD/PernaD/PernaD_end
+    - Empty/Cadeira
+    - RoupaD
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: correcao(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Empty
+      parentName: correcao(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: -0.000000057601163, z: -0.000000057601163, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: ArmatureD
+      parentName: Empty
+      position: {x: -0.0010975922, y: -0.0020133047, z: 0.00854737}
+      rotation: {x: 0.8515387, y: -1.8907959e-16, z: 1.899927e-23, w: 0.52429175}
+      scale: {x: 0.20662159, y: 0.20662159, z: 0.20662159}
+    - name: CoxaD
+      parentName: ArmatureD
+      position: {x: 0.010624177, y: -0.0000000047683715, z: 5.9604643e-10}
+      rotation: {x: 0.7071188, y: 0.034966376, z: -0.03479423, w: 0.70537204}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: PernaD
+      parentName: CoxaD
+      position: {x: 6.4792005e-10, y: 0.01, z: -1.4551915e-13}
+      rotation: {x: 0.5365389, y: 0.025468422, z: 0.04317458, w: 0.84238553}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PernaD_end
+      parentName: PernaD
+      position: {x: -0, y: 0.022391267, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cadeira
+      parentName: Empty
+      position: {x: 4.9874663e-11, y: -0.0011589121, z: 0.005619663}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.2998183, y: 1.2998183, z: 1.128154}
+    - name: RoupaD
+      parentName: correcao(Clone)
+      position: {x: 0.114507996, y: 0.81135684, z: 0.20926806}
+      rotation: {x: -0.7071068, y: -0.000000057601163, z: -0.000000057601163, w: 0.7071068}
+      scale: {x: 100, y: 99.999985, z: 99.999985}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Empty
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
